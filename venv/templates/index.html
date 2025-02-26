@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>give me 10 points :3 </title>
+    <link rel="shortcut icon" href="10.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--<script>alert('hui');</script>-->
     <h1>Резюме</h1>
-    <div>
-    <p>Имя:</p> {{name}}<br>
-    <b>Должность:</b> {{job_position}} <br>
-    <b>Место работы:</b> {{work_place}} <br>
-    <b>Дата создания:</b> {{datetime}}
 
-    <button class="button" onclick="func()" type="btn">Изменить имя на "Говно"</button>
+    <div id="main">
+        <div id="main-resume">
+            <div id="main-text">
+                <div class="main" id="name">Имя: {{name}} </div>
+                <div class="main">Должность: {{job_position}} </div>
+                <div class="main">Место работы:</b> {{work_place}} </div>
+                <div class="main">Дата создания:</b> {{datetime}} </div>
+            </div>
+        </div>
+
+        <div>
+            <button id="button" onclick="changeName(name)" type="btn">
+                РЕДАКТИРОВАТЬ
+            </button>
+        </div>
+    </div>
 
     <script src="form.js"></script>
 </body>

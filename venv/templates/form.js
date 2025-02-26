@@ -1,5 +1,5 @@
+let name = document.getElementById('name');
 
-
-function func() {
-
+function changeName() {
+    name.innerHTML = 'GAY';
 }

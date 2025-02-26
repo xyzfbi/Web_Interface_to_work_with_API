@@ -1,9 +1,96 @@
-.button {
-    background-color: whitesmoke;
-    font-size: 30px;
-    font-weight: 300;
-    border: none;
+body {
+    background-color: #EAE7DC;
+}
+
+h1 {
+    padding-top: 60px;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Newsreader", serif;
+    font-weight: 700;
+    color: #e85a4f;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(238, 235, 232);
+    margin: auto;
+    margin-top: 100px;
+    height: 600px;
+    width: 60vw;
+
+    border-style: solid;
+    border-width: 6px;
     border-radius: 20px;
-    width: 400px;
-    height: 100px;
+    border-color: #e9807428;
+
+    filter: drop-shadow(0 0 10px rgb(201, 201, 201));
+
+    
+    #main-resume {
+        display: flex;
+        justify-content: center;
+        background-color: #EAE7DC;
+        height: 450px;
+        width: 90%;
+        margin: auto;
+        
+        border-style: solid;
+        border-width: 6px;
+        border-color: #e9807428;
+        border-radius: 12px;
+    
+        font-size: 40px;
+        font-family: "Newsreader", serif;
+        font-weight: 700;
+        color: #8e8d8a;
+    
+    
+        #main-text {
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            justify-content: space-around;
+            width: 100%;
+
+
+            .main {
+                padding-left: 40px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+#button {
+    position: absolute;
+    top: calc(100% - 55px);
+    left: calc(50% - 110px);
+    background-color: #EAE7DC;
+    border: none;
+    border-radius: 15px;
+    width: 220px;
+    height: 40px;
+    filter: drop-shadow(0 0 10px #d4d1c7);
+    cursor: pointer;
+
+    font-size: 20px;
+    font-family: "Newsreader", serif;
+    font-weight: 600;
+    color: #a79885;
+
+    transition: all 0.4s ease-out;
+}
+
+#button:hover {
+    transition: all 0.3s ease-out;
+    background-color: #faf6ea;
+    filter: drop-shadow(0 0 10px #b9b7ae);
+    letter-spacing: 1px;
 }
