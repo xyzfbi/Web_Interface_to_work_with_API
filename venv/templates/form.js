@@ -1,5 +1,12 @@
-let name = document.getElementById('name');
+const edit = document.getElementById('mainedit');
+const editBlock = document.getElementById('edit-disabled');
 
 function changeName() {
-    name.innerHTML = 'GAY';
+    edit.setAttribute("id", "main-edit");
+    editBlock.setAttribute("id", "edit");
+}
+
+function EXITchangeName() {
+    edit.setAttribute("id", "mainedit");
+    editBlock.setAttribute("id", "edit-disabled");
 }

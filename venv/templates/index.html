@@ -13,8 +13,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Резюме</h1>
+    <div id="mainedit">
+        <div id="edit-disabled">
+            <div id="edit-block">
+                <div id="block">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
 
+                    <div>
+                        <button>Сохранить</button>
+                        <button onclick="EXITchangeName()">Отменить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h1>Резюме</h1>    
+    
     <div id="main">
         <div id="main-resume">
             <div id="main-text">
@@ -30,6 +49,8 @@
                 РЕДАКТИРОВАТЬ
             </button>
         </div>
+
+        
     </div>
 
     <script src="form.js"></script>
