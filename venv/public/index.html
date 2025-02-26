@@ -1,21 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>give me 10 points :3 </title>
+    <link rel="shortcut icon" href="10.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--<script>alert('hui');</script>-->
-    <h1>Резюме</h1>
-    <div>
-    <p>Имя:</p> Max<br>
-    <b>Должность:</b> Python Developer <br>
-    <b>Место работы:</b> Yandex <br>
-    <b>Дата создания:</b> 2025-02-25 22:53:05.639617
+    <div id="mainedit">
+        <div id="edit-disabled">
+            <div id="edit-block">
+                <div id="block">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
 
-    <button class="button" onclick="func()" type="btn">Изменить имя на "Говно"</button>
+                    <div>
+                        <button>Сохранить</button>
+                        <button onclick="EXITchangeName()">Отменить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h1>Резюме</h1>    
+    
+    <div id="main">
+        <div id="main-resume">
+            <div id="main-text">
+                <div class="main" id="name">Имя: Max </div>
+                <div class="main">Должность: Python Developer </div>
+                <div class="main">Место работы:</b> Yandex </div>
+                <div class="main">Дата создания:</b> 2025-02-27 00:43:14.733189 </div>
+            </div>
+        </div>
+
+        <div>
+            <button id="button" onclick="changeName(name)" type="btn">
+                РЕДАКТИРОВАТЬ
+            </button>
+        </div>
+
+        
+    </div>
 
     <script src="form.js"></script>
 </body>
