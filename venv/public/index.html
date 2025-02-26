@@ -13,37 +13,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="error-input">
-        Введите ВСЕ значения!
-    </div>
-
     <div id="mainedit">
         <div id="edit-disabled">
-            <div id="block">
-                <div id="inputs">
-                    <div id="input-yours">Введите данные</div>
-                    <input id="input1" onfocus="stretchElement('input1')" onblur="EXITstretchElement('input1')" placeholder="Имя" type="text">
-                    <input id="input2" onfocus="stretchElement('input2')" onblur="EXITstretchElement('input2')" placeholder="Должность" type="text">
-                    <input id="input3" onfocus="stretchElement('input3')" onblur="EXITstretchElement('input3')" placeholder="Место работы" type="text">
-                </div>
+            <div id="edit-block">
+                <div id="block">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
 
-                <div id="buttons">
-                    <button id="butt1" onclick="saveChanges()">Сохранить</button>
-                    <button id="butt2" onclick="EXITchangeName()">Отменить</button>
+                    <div>
+                        <button>Сохранить</button>
+                        <button onclick="EXITchangeName()">Отменить</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <h1>Резюме</h1>
 
+    <h1>Резюме</h1>    
+    
     <div id="main">
         <div id="main-resume">
             <div id="main-text">
-                <div class="main" id="name">Имя: dsffsdfs </div>
-                <div class="main" id="occupation">Должность:  </div>
-                <div class="main" id="workplace">Место работы:  </div>
-                <div class="main" id="date">Дата создания: 2025-02-27 23:15:13 </div>
+                <div class="main" id="name">Имя: Max </div>
+                <div class="main">Должность: Python Developer </div>
+                <div class="main">Место работы:</b> Yandex </div>
+                <div class="main">Дата создания:</b> 2025-02-27 00:43:14.733189 </div>
             </div>
         </div>
 
@@ -52,6 +49,8 @@
                 РЕДАКТИРОВАТЬ
             </button>
         </div>
+
+        
     </div>
 
     <script src="form.js"></script>
