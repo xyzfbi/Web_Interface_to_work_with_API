@@ -5,11 +5,14 @@ const editBlock = document.getElementById('edit-disabled');
 const name = document.getElementById('name');
 const occupation = document.getElementById('occupation');
 const workplace = document.getElementById('workplace');
+const date = document.getElementById('date');
 
 const input_name = document.getElementById('input1');
 const input_occupation = document.getElementById('input2');
 const input_workplace = document.getElementById('input3');
 const error = document.getElementById('error-input');
+
+let now = new Date();
 
 
 //functions
@@ -39,6 +42,7 @@ function saveChanges() {
         name.innerHTML = 'Имя: '+ input_name.value;
         occupation.innerHTML = 'Имя: '+ input_occupation.value;
         workplace.innerHTML = 'Имя: '+ input_workplace.value;
-        EXITchangeName()
+        date.innerHTML = 'Дата создания: ' + now.getDate() + '.' + now.getMonth() + '.' + now.getFullYear();
+        EXITchangeName();
     }
 }
