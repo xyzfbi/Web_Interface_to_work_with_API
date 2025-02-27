@@ -40,6 +40,29 @@ function saveChanges() {
         name.innerHTML = 'Имя: '+ input_name.value;
         occupation.innerHTML = 'Должность: '+ input_occupation.value;
         workplace.innerHTML = 'Место работы: '+ input_workplace.value;
+
+        const data = {
+            name: input_name.value,
+            occupation:  input_occupation.value,
+            workplace: input_workplace.value,
+            date: date.value
+        }
+
+        fetch('/resume/generate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.json())
+            .then(result => {
+                console.log('Success', result);
+                window.location.reload();
+            })
+            .catch(error => {
+                console.log('Error', error)
+            });
         EXITchangeName();
     }
 }
