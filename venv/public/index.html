@@ -13,19 +13,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="error-input">
+        Введите ВСЕ значения!
+    </div>
+
+
     <div id="mainedit">
         <div id="edit-disabled">
-            <div id="edit-block">
-                <div id="block">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
+            <div id="block">
+                <div id="inputs">
+                    <div id="input-yours">Введите данные</div>
+                    <input id="input1" onfocus="stretchElement('input1')" onblur="EXITstretchElement('input1')" placeholder="Имя" type="text">
+                    <input id="input2" onfocus="stretchElement('input2')" onblur="EXITstretchElement('input2')" placeholder="Должность" type="text">
+                    <input id="input3" onfocus="stretchElement('input3')" onblur="EXITstretchElement('input3')" placeholder="Место работы" type="text">
+                </div>
 
-                    <div>
-                        <button>Сохранить</button>
-                        <button onclick="EXITchangeName()">Отменить</button>
-                    </div>
+                <div id="buttons">
+                    <button id="butt1" onclick="saveChanges()">Сохранить</button>
+                    <button id="butt2" onclick="EXITchangeName()">Отменить</button>
                 </div>
             </div>
         </div>
@@ -38,9 +43,9 @@
         <div id="main-resume">
             <div id="main-text">
                 <div class="main" id="name">Имя: Max </div>
-                <div class="main">Должность: Python Developer </div>
-                <div class="main">Место работы:</b> Yandex </div>
-                <div class="main">Дата создания:</b> 2025-02-27 00:43:14.733189 </div>
+                <div class="main" id="occupation">Должность: Python Developer </div>
+                <div class="main" id="workplace">Место работы: Yandex </div>
+                <div class="main" id="date">Дата создания: 2025-02-27 23:17:50.056203 </div>
             </div>
         </div>
 
