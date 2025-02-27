@@ -6,3 +6,4 @@ env/
 env.bak/
 venv.bak/
 bin/
+.gitignore/
