@@ -15,31 +15,25 @@ def load_data():
         with open(DATA_FILE_NAME, "r", encoding="utf-8") as json_file:
             content = json_file.read()
             print(f"Loaded JSON content: {content}")
-            data = json.loads(content)
-            print(f"Data loaded: {data}")
-            return data
+            return json.loads(content)
     except FileNotFoundError:
-        default_data = {
+        return {
             "name": "Max",
             "job_position": "Python Developer",
             "work_place": "Yandex",
             "datetime": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }
-        print(f"File not found. Using default data: {default_data}")
-        return default_data
     except json.JSONDecodeError as e:
-        error_data = {
+        print(f"Error decoding JSON: {e}")
+        return {
             "name": "Max",
             "job_position": "Python Developer",
             "work_place": "Yandex",
             "datetime": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }
-        print(f"Error decoding JSON: {e}. Using default data: {error_data}")
-        return error_data
 
 def save_data(data):
     data["datetime"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    print(f"Saving data: {data}")
     with open(DATA_FILE_NAME, "w", encoding="utf-8") as json_file:
         json.dump(data, json_file, ensure_ascii=False, indent=4)
 
@@ -49,7 +43,6 @@ def generate_resume(data=None):
     else:
         data = load_data()
 
-    print(f"Generating resume with data: {data}")
     with open(TEMPLATE_FILE_NAME, "r", encoding="utf-8") as template_file:
         template_text = template_file.read()
         jinja_template = Template(template_text)

@@ -43,10 +43,10 @@ function saveChanges() {
 
         const data = {
             name: input_name.value,
-            job_position: input_occupation.value,
-            work_place: input_workplace.value,
-            datetime: new Date().toISOString()
-        };
+            occupation:  input_occupation.value,
+            workplace: input_workplace.value,
+            date: date.value
+        }
 
         fetch('/resume/generate', {
             method: 'POST',
@@ -58,6 +58,7 @@ function saveChanges() {
             .then(response => response.json())
             .then(result => {
                 console.log('Success', result);
+                window.location.reload();
             })
             .catch(error => {
                 console.log('Error', error)
