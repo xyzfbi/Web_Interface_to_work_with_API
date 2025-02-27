@@ -12,8 +12,6 @@ const input_occupation = document.getElementById('input2');
 const input_workplace = document.getElementById('input3');
 const error = document.getElementById('error-input');
 
-let now = new Date();
-
 
 //functions
 function changeName() {
@@ -40,9 +38,8 @@ function saveChanges() {
         setTimeout(() => {document.getElementById('error').setAttribute("id", "error-input");}, 5000);
     } else {
         name.innerHTML = 'Имя: '+ input_name.value;
-        occupation.innerHTML = 'Имя: '+ input_occupation.value;
-        workplace.innerHTML = 'Имя: '+ input_workplace.value;
-        date.innerHTML = 'Дата создания: ' + now.getDate() + '.' + now.getMonth() + '.' + now.getFullYear();
+        occupation.innerHTML = 'Должность: '+ input_occupation.value;
+        workplace.innerHTML = 'Место работы: '+ input_workplace.value;
         EXITchangeName();
     }
 }
