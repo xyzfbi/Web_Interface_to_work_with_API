@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>give me 10 points :3 </title>
+    <link rel="shortcut icon" href="10.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="error-input">
+        Введите ВСЕ значения!
+    </div>
+
+    <div id="mainedit">
+        <div id="edit-disabled">
+            <div id="block">
+                <div id="inputs">
+                    <div id="input-yours">Введите данные</div>
+                    <input id="input1" onfocus="stretchElement('input1')" onblur="EXITstretchElement('input1')" placeholder="Имя" type="text">
+                    <input id="input2" onfocus="stretchElement('input2')" onblur="EXITstretchElement('input2')" placeholder="Должность" type="text">
+                    <input id="input3" onfocus="stretchElement('input3')" onblur="EXITstretchElement('input3')" placeholder="Место работы" type="text">
+                </div>
+
+                <div id="buttons">
+                    <button id="butt1" onclick="saveChanges()">Сохранить</button>
+                    <button id="butt2" onclick="EXITchangeName()">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1>Резюме</h1>
+
+    <div id="main">
+        <div id="main-resume">
+            <div id="main-text">
+                <div class="main" id="name">Имя: sdfsddfs </div>
+                <div class="main" id="occupation">Должность:  </div>
+                <div class="main" id="workplace">Место работы:  </div>
+                <div class="main" id="date">Дата создания: 2025-02-28 00:22:13 </div>
+            </div>
+        </div>
+
+        <div>
+            <button id="button" onclick="changeName(name)" type="btn">
+                РЕДАКТИРОВАТЬ
+            </button>
+        </div>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>
